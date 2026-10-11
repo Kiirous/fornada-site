@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fornada — gestão para confeitaria artesanal</title>
+  <meta name="description" content="O Fornada organiza encomendas, estoque e custos da sua confeitaria e mostra, em reais, quanto sobrou de verdade. Feito para tablet e celular, com letras grandes e linguagem simples.">
+  <meta name="theme-color" content="#5A1F1A">
+  <meta property="og:title" content="Fornada — gestão que faz seu doce crescer">
+  <meta property="og:description" content="Encomendas, estoque, custos e lucro da sua confeitaria, num app simples e bonito.">
+  <meta property="og:image" content="assets/img/tablet_inicio.jpg">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Calistoga&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <script>document.documentElement.classList.add("js")</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="leaf" viewBox="-20 -10 290 440"><path fill="#C9644A" d="M225 3C232 60 225 135 198 172C150 225 45 255 13 345C-5 260 10 170 70 100C120 40 180 15 225 3Z"/><path fill="#5A1F1A" d="M242 182C246 262 205 335 125 378C92 395 58 407 33 416C28 350 58 288 120 240C165 205 205 188 242 182Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12.5l4.2 4.2L19 7"/></symbol>
+    <symbol id="i-receipt" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M6 3h12v18l-2-1.4-2 1.4-2-1.4-2 1.4-2-1.4L6 21z"/><path stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15.5" rx="3" fill="none" stroke="currentColor" stroke-width="1.9"/><path stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M8 3v4M16 3v4M3.5 10h17"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 19h16M7 15l3.5-4 3 2.5L18 8"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M14.5 8H18v3.5"/></symbol>
+    <symbol id="i-cake" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4 20.5h16v-7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M4 15.5c1.5 1.2 3 1.2 4 0s3-1.2 4 0 3 1.2 4 0 2.5-1.2 4 0M12 11.5V8M12 5.5c-.8-.9-.8-1.8 0-2.6.8.8.8 1.7 0 2.6z"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M3.5 7.5L12 3.5l8.5 4v9L12 20.5l-8.5-4z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M3.5 7.5L12 11.5l8.5-4M12 11.5v9"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4 8.5A2 2 0 0 1 6 6.5h2l1.5-2h5l1.5 2h2a2 2 0 0 1 2 2V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.6" fill="none" stroke="currentColor" stroke-width="1.9"/></symbol>
+    <symbol id="i-people" viewBox="0 0 24 24"><circle cx="9" cy="8.5" r="3.4" fill="none" stroke="currentColor" stroke-width="1.9"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M3 19.5c.6-3.3 3-5 6-5s5.4 1.7 6 5M15.5 5.3a3.3 3.3 0 0 1 0 6.4M17.5 14.6c1.8.6 3 2.2 3.5 4.9"/></symbol>
+    <symbol id="i-pix" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 3l9 9-9 9-9-9z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M8 12l4-4 4 4-4 4z"/></symbol>
+    <symbol id="i-whisk" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M14 10l6.5-6.5M9.5 4.5c3.5 0 6.5 3 6.5 6.5S11 20 6.5 20 4 16.5 4 13s2-8.5 5.5-8.5z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M7 8.5c2.5 1.5 4 3.5 4.5 6.5"/></symbol>
+    <symbol id="i-blender" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M6 3.5h11l-2 10H8z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M7.5 13.5h8l1 7h-10z"/><circle cx="11.5" cy="17.3" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M3.5 9.5L12 4l8.5 5.5z"/><path stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M5.5 10v7M10 10v7M14 10v7M18.5 10v7M3.5 20h17"/></symbol>
+    <symbol id="i-offline" viewBox="0 0 24 24"><rect x="6" y="2.5" width="12" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.9"/><path stroke="currentColor" stroke-width="1.9" stroke-linecap="round" d="M10.5 18.5h3"/></symbol>
+    <symbol id="i-cloud" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M7 18.5h10.5a4 4 0 0 0 .4-8 6 6 0 0 0-11.6 1.5A3.3 3.3 0 0 0 7 18.5z"/></symbol>
+    <symbol id="i-text" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M4 19L9 5l5 14M5.8 14h6.4M15 12.5h5M17.5 10v5"/></symbol>
+    <symbol id="i-touch" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M9 11V5.5a1.8 1.8 0 0 1 3.6 0V11m0-1.5a1.8 1.8 0 0 1 3.6 0V12m0-1a1.8 1.8 0 0 1 3.4.9V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-5-2.7L4.3 15a1.8 1.8 0 0 1 2.9-2.1L9 15"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 20s-7.5-4.6-7.5-10A4.3 4.3 0 0 1 12 7.4 4.3 4.3 0 0 1 19.5 10c0 5.4-7.5 10-7.5 10z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3" fill="none" stroke="currentColor" stroke-width="1.9"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4 7l8 6 8-6"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M8.8 12l2.2 2.2 4.2-4.4"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="site-header" id="topo">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Fornada, página inicial"><svg aria-hidden="true"><use href="#leaf"/></svg><span>Fornada</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#recursos">Recursos</a>
+      <a href="#planos">Planos</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-primary" href="#comecar">Quero usar</a>
+    </nav>
+  </div>
+</header>
+
+<main id="conteudo">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="reveal">
+        <span class="eyebrow">Gestão para confeitaria artesanal</span>
+        <h1 id="hero-title">Saiba quanto <em>sobra</em> de cada bolo.</h1>
+        <p class="lead">O Fornada organiza suas encomendas, o estoque e os custos — e mostra, em reais, se a sua confeitaria está lucrando. Tudo com letras grandes, botões grandes e palavras simples.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#comecar"><svg aria-hidden="true"><use href="#i-heart"/></svg>Quero usar o Fornada</a>
+          <a class="btn btn-ghost" href="#recursos">Ver o que ele faz</a>
+        </div>
+        <p class="note"><svg aria-hidden="true"><use href="#i-check"/></svg>30 dias com tudo liberado. Depois, continue no plano grátis se quiser.</p>
+      </div>
+      <div class="devices reveal" aria-hidden="true">
+        <div class="tablet"><img src="assets/img/tablet_inicio.jpg" alt="" width="1600" height="1000" fetchpriority="high"></div>
+        <div class="phone"><img src="assets/img/phone_relatorios.jpg" alt="" width="720" height="1600" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip">
+    <div class="wrap">
+      <div><span class="icon-tile"><svg aria-hidden="true"><use href="#i-text"/></svg></span><p><strong>Fácil de ler</strong><span>Texto grande, alto contraste e valores bem destacados.</span></p></div>
+      <div><span class="icon-tile"><svg aria-hidden="true"><use href="#i-touch"/></svg></span><p><strong>Fácil de tocar</strong><span>Botões grandes, sempre com nome. Nada escondido em gestos.</span></p></div>
+      <div><span class="icon-tile"><svg aria-hidden="true"><use href="#i-offline"/></svg></span><p><strong>Funciona sem internet</strong><span>Feito para tablet e celular. Seus dados abrem na hora.</span></p></div>
+    </div>
+  </div>
+
+  <section id="recursos" aria-labelledby="recursos-title">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Tudo num lugar só</span>
+        <h2 id="recursos-title">Do pedido ao lucro, sem planilha</h2>
+        <p class="lead">Cada encomenda já nasce com o custo dos ingredientes. Cada compra atualiza o estoque. No fim do mês, você sabe exatamente para onde foi o dinheiro.</p>
+      </div>
+      <div class="features">
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-receipt"/></svg></span><h3>Encomendas</h3><p>Orçamento, sinal, entrega e quitação. Veja o que falta receber e mande o pedido para a cliente como imagem ou texto.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-calendar"/></svg></span><h3>Agenda e avisos</h3><p>Entregas, lembretes e aniversários das clientes, por semana ou por mês. O celular avisa na véspera e na hora.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-chart"/></svg></span><h3>Entrou, Gastou, Sobrou</h3><p>Seu resultado em palavras simples, mês a mês, com o melhor mês, as despesas e o que cada produto rende.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-cake"/></svg></span><h3>Receitas e preço sugerido</h3><p>Monte bolos por massa, recheio e cobertura. O app calcula o custo de hoje e sugere o preço — pagando ou não o seu trabalho.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-box"/></svg></span><h3>Estoque com custo médio</h3><p>Compras, perdas e contagem. Lista pronta com os materiais mais comuns e lista de compras feita a partir das encomendas.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-camera"/></svg></span><h3>Compra pela foto do cupom</h3><p>Tire foto da nota do mercado e os itens e preços entram na compra para você conferir.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-people"/></svg></span><h3>Clientes</h3><p>Histórico, termômetro de confiança nos pagamentos e quem mais compra. Aniversário da cliente e da família dela.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-pix"/></svg></span><h3>Pix e cobrança gentil</h3><p>QR Code e copia e cola no orçamento, e um lembrete educado pelo WhatsApp para quem está devendo.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-whisk"/></svg></span><h3>Plano de produção</h3><p>O que preparar no dia: receitas somadas na ordem certa — massa, recheio, cobertura, decoração e embalagem.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-blender"/></svg></span><h3>Equipamentos</h3><p>Anote a batedeira dos sonhos, divida o valor do forno novo nas contas e saiba quanto tempo cada um durou.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-bank"/></svg></span><h3>MEI em dia</h3><p>Lembrete do DAS todo mês e aviso quando o faturamento do ano se aproxima do limite do MEI.</p></article>
+        <article class="feature reveal"><span class="icon-tile"><svg aria-hidden="true"><use href="#i-cloud"/></svg></span><h3>Seus dados seguros</h3><p>Nuvem para usar no tablet e no celular ao mesmo tempo, ou uma cópia gratuita para guardar onde quiser.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding-top:0" aria-label="Telas do aplicativo">
+    <div class="wrap showcase">
+      <div class="show">
+        <div class="show-media reveal"><div class="frame"><img src="assets/img/phone_inicio.jpg" alt="Tela inicial do Fornada no celular, com as entregas de hoje e o resultado do mês" width="720" height="1600" loading="lazy"></div></div>
+        <div class="reveal">
+          <span class="eyebrow">Início</span>
+          <h2>O seu dia, logo de manhã</h2>
+          <p class="lead">Ao abrir o app, você vê o que entregar hoje, quanto falta receber e como vai o mês.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Um toque para marcar como entregue ou retirada.</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Alerta gentil quando um ingrediente sobe e o lucro cai.</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Primeiros passos guiados para começar sem medo.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="show reverse">
+        <div class="show-media reveal"><div class="frame"><img src="assets/img/phone_produto.jpg" alt="Ficha de um bolo no Fornada com custo, margem e preço sugerido por tamanho" width="720" height="1600" loading="lazy"></div></div>
+        <div class="reveal">
+          <span class="eyebrow">Produtos</span>
+          <h2>Preço certo, sem chute</h2>
+          <p class="lead">Cada bolo mostra quanto custa hoje, quanto sobra em cada tamanho e o preço sugerido pela sua meta de margem.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Medidas caseiras: xícara e colher, do jeito que você cozinha.</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Opção de incluir o valor da sua hora de trabalho.</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cada venda guarda o custo do dia: o passado não muda.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="show">
+        <div class="show-media reveal"><div class="frame"><img src="assets/img/phone_agenda.jpg" alt="Agenda da semana no Fornada com entregas e aniversários" width="720" height="1600" loading="lazy"></div></div>
+        <div class="reveal">
+          <span class="eyebrow">Agenda</span>
+          <h2>Nenhuma entrega esquecida</h2>
+          <p class="lead">Semana no celular, mês inteiro no tablet. Dia cheio aparece marcado antes de você aceitar mais um pedido.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aviso no celular na véspera e duas horas antes.</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aniversários das clientes para oferecer o bolo na hora certa.</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Lembretes seus, com hora marcada.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" aria-labelledby="band-title">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow" style="color:var(--caramelo)">Sem jargão contábil</span>
+        <h2 id="band-title">Três palavras para entender o seu negócio</h2>
+        <p class="lead">Nada de "faturamento bruto" ou "CMV". O Fornada fala como você fala — e sempre mostra o sinal e a seta, não só a cor.</p>
+      </div>
+      <div class="terms">
+        <div class="term reveal"><div class="word">Entrou</div><div class="value">R$ 4.850,00</div><p>O valor das encomendas que você entregou no mês.</p></div>
+        <div class="term reveal"><div class="word">Gastou</div><div class="value">R$ 2.310,00</div><p>Ingredientes das vendas, gás, combustível, taxas, DAS e perdas.</p></div>
+        <div class="term reveal"><div class="word">Sobrou</div><div class="value up">↑ +R$ 2.540,00</div><p>O que ficou para você. E, se quiser, quanto sobra pagando o seu trabalho.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="planos" aria-labelledby="planos-title">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Planos</span>
+        <h2 id="planos-title">Comece grátis. Cresça quando quiser.</h2>
+        <p class="lead">Os primeiros 30 dias têm tudo liberado. Depois, escolha o plano que combina com a sua confeitaria.</p>
+      </div>
+      <div class="plans">
+        <article class="plan reveal">
+          <h3>Grátis</h3>
+          <div class="price">R$ 0</div>
+          <p class="alt">Para conhecer e começar a organizar.</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Até 10 encomendas novas por mês</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Estoque, receitas, clientes e agenda</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Relatório do mês atual</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Cópia dos dados para guardar com você</li>
+          </ul>
+          <a class="btn btn-ghost" href="#comecar">Começar grátis</a>
+        </article>
+        <article class="plan featured reveal">
+          <span class="badge">Mais escolhido</span>
+          <h3>Fornada</h3>
+          <div class="price">R$ 24,90 <small>/mês</small></div>
+          <p class="alt">ou R$ 199 por ano (dois meses de presente)</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Encomendas sem limite</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Nuvem: tablet e celular juntos</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Relatórios de qualquer período</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Pix no orçamento e cobrança pelo WhatsApp</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Compra pela foto do cupom</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Aviso de preços para revisar, MEI e equipamentos nas contas</li>
+          </ul>
+          <a class="btn btn-primary" href="#comecar">Quero o Fornada</a>
+        </article>
+        <article class="plan reveal">
+          <h3>Fornada Mais</h3>
+          <div class="price">R$ 44,90 <small>/mês</small></div>
+          <p class="alt">ou R$ 399 por ano</p>
+          <ul>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Tudo do plano Fornada</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Plano de produção do dia</li>
+            <li><svg aria-hidden="true"><use href="#i-check"/></svg>Novidades primeiro, como a encomenda por voz</li>
+          </ul>
+          <a class="btn btn-ghost" href="#comecar">Quero o Mais</a>
+        </article>
+      </div>
+      <p class="plans-note">Assinatura pela Google Play ou App Store, ou direto com a gente por Pix. Cancele quando quiser.</p>
+    </div>
+  </section>
+
+  <section id="duvidas" style="padding-top:0" aria-labelledby="duvidas-title">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="eyebrow">Dúvidas</span>
+        <h2 id="duvidas-title">Perguntas frequentes</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal"><summary>Preciso de internet para usar?</summary><p>Não. O Fornada guarda tudo no próprio aparelho e funciona sem internet. A internet só é usada para salvar na nuvem (nos planos pagos), ler a foto do cupom e receber o seu plano.</p></details>
+        <details class="reveal"><summary>Funciona no tablet e no celular?</summary><p>Sim. Ele foi pensado para tablet Android deitado, mas funciona no celular e em pé. Com o plano Fornada, os dados aparecem nos dois ao mesmo tempo.</p></details>
+        <details class="reveal"><summary>E se eu trocar de celular?</summary><p>Com conta e plano pago, é só entrar na conta no aparelho novo. No plano grátis, use "Exportar meus dados" e depois "Tenho uma cópia dos meus dados" no aparelho novo. O app lembra você de fazer a cópia.</p></details>
+        <details class="reveal"><summary>Posso testar antes de pagar?</summary><p>Pode. Os primeiros 30 dias têm tudo liberado, e você ainda pode abrir uma demonstração com uma confeitaria de exemplo, sem misturar com os seus dados.</p></details>
+        <details class="reveal"><summary>O app substitui o contador?</summary><p>Não. O Fornada ajuda você a entender custos e lucro do dia a dia em linguagem simples. Para impostos e obrigações fiscais, continue contando com o seu contador.</p></details>
+        <details class="reveal"><summary>Meus dados e os das minhas clientes estão seguros?</summary><p>Cada confeitaria só é vista pela própria conta, com conexão criptografada. Você pode exportar seus dados ou excluir sua conta quando quiser, direto no app. Leia a <a href="privacidade.html">Política de Privacidade</a>.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="comecar" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="box reveal">
+        <div>
+          <h2 id="cta-title">Em breve na Google Play e na App Store</h2>
+          <p>Quer usar o Fornada antes de todo mundo, ou levar para a sua confeitaria com a nossa ajuda? Fale com a gente.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-light" href="mailto:marcoseduardosb@hotmail.com?subject=Quero%20usar%20o%20Fornada"><svg aria-hidden="true"><use href="#i-mail"/></svg>Falar por e-mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a class="brand" href="./"><svg aria-hidden="true"><use href="#leaf"/></svg><span>Fornada</span></a>
+      <div class="tagline">Gestão que faz seu doce crescer</div>
+    </div>
+    <div>
+      <h4>Fornada</h4>
+      <ul><li><a href="#recursos">Recursos</a></li><li><a href="#planos">Planos</a></li><li><a href="#duvidas">Dúvidas</a></li></ul>
+    </div>
+    <div>
+      <h4>Legal e contato</h4>
+      <ul><li><a href="privacidade.html">Política de Privacidade</a></li><li><a href="termos.html">Termos de Uso</a></li><li><a href="mailto:marcoseduardosb@hotmail.com">marcoseduardosb@hotmail.com</a></li></ul>
+    </div>
+    <p class="copy">© 2026 Fornada. As telas mostram uma confeitaria de demonstração, com dados fictícios.</p>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>
