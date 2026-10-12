@@ -32,7 +32,7 @@
   <div class="wrap legal-hero">
     <span class="eyebrow">Privacidade</span>
     <h1>Política de Privacidade</h1>
-    <p class="updated">Vigente desde 11 de outubro de 2026.</p>
+    <p class="updated">Vigente desde 11 de outubro de 2026. Atualizada em 12 de outubro de 2026 (leitor de código de barras).</p>
   </div>
 
   <div class="wrap legal">
@@ -100,14 +100,20 @@
         <li><strong>Foto do cupom fiscal ou nota de compra</strong>, quando você usa "Foto do cupom". Veja a seção <a href="#ia">6</a>.</li>
         <li>Contamos quantas leituras cada conta faz por dia (sem guardar as imagens), para limitar o uso.</li>
       </ul>
-      <h3>3.4 Dados de uso e de falhas</h3>
+      <h3>3.4 Códigos de barras</h3>
+      <ul>
+        <li>Quando você lê o código de barras de uma embalagem, a imagem da câmera é analisada <strong>só no seu aparelho</strong>; nenhuma foto é enviada.</li>
+        <li>Ao cadastrar um material novo pelo código, <strong>apenas o número do código</strong> é enviado à base pública de produtos <strong>Open Food Facts</strong>, para trazer o nome e o tamanho da embalagem. Nenhum dado seu ou das suas clientes vai junto.</li>
+        <li>O código fica guardado no material, para ele ser achado na próxima leitura.</li>
+      </ul>
+      <h3>3.5 Dados de uso e de falhas</h3>
       <ul>
         <li><strong>Estatísticas de uso</strong> (Google Firebase Analytics): quais telas são abertas e ações gerais, como "encomenda criada" ou "compra registrada". <strong>Não enviamos</strong> nomes, telefones, textos que você digita, identificadores dos seus registros nem valores em reais.</li>
         <li><strong>Relatórios de falhas</strong> (Google Firebase Crashlytics): quando algo dá errado, o app envia informações técnicas, como modelo do aparelho, versão do sistema e do app e o ponto do código onde o erro aconteceu.</li>
         <li><strong>Configurações remotas</strong> (Google Firebase Remote Config): o app consulta ajustes que podemos ligar ou desligar sem uma nova versão.</li>
         <li>Esses serviços usam um identificador do aparelho/instalação gerado pelo Google.</li>
       </ul>
-      <h3>3.5 Dados que não coletamos</h3>
+      <h3>3.6 Dados que não coletamos</h3>
       <p>Não coletamos sua localização, seus contatos, suas mensagens nem o conteúdo de outros aplicativos. O microfone, quando o recurso de encomenda por voz estiver disponível, só será usado enquanto você estiver falando e com a sua permissão.</p>
 
       <h2 id="onde">4. Onde os dados ficam</h2>
@@ -151,6 +157,7 @@
         <li><strong>Back4app</strong> (servidor e banco de dados da nuvem, contas e arquivos de fotos).</li>
         <li><strong>Google Firebase</strong> (estatísticas de uso, relatórios de falhas e configurações remotas).</li>
         <li><strong>Anthropic</strong> (leitura de cupons e, futuramente, das encomendas por voz).</li>
+        <li><strong>Open Food Facts</strong> (base pública de produtos: recebe só o número do código de barras lido no cadastro de um material).</li>
         <li><strong>Google Play e Apple App Store</strong> (pagamentos de assinatura) e, quando passarmos a usá-lo, um serviço de gestão de assinaturas como o RevenueCat, que recebe apenas a confirmação da compra e um identificador da conta.</li>
       </ul>
       <p>Quando <strong>você</strong> escolhe enviar um orçamento, comprovante, cobrança ou lista pelo WhatsApp, e-mail ou outro aplicativo, o conteúdo é entregue a esse aplicativo por sua iniciativa e passa a seguir a política dele. O app nunca mostra seus custos, lucro ou observações internas no que é enviado à cliente.</p>
@@ -161,7 +168,7 @@
 
       <h2 id="permissoes">9. Permissões do aparelho</h2>
       <ul>
-        <li><strong>Câmera e galeria:</strong> para fotos de produtos e do cupom, só quando você toca no botão.</li>
+        <li><strong>Câmera e galeria:</strong> para fotos de produtos e do cupom e para ler códigos de barras, só quando você toca no botão.</li>
         <li><strong>Notificações e alarmes:</strong> para avisar das entregas e lembretes na hora certa. Os avisos são criados no próprio aparelho.</li>
         <li><strong>Arquivos:</strong> para escolher uma cópia dos seus dados ao carregá-la.</li>
         <li><strong>Microfone</strong> (quando a encomenda por voz existir): só enquanto você fala.</li>
