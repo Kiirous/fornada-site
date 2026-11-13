@@ -32,7 +32,7 @@
   <div class="wrap legal-hero">
     <span class="eyebrow">Privacidade</span>
     <h1>Política de Privacidade</h1>
-    <p class="updated">Vigente desde 11 de novembro de 2026 (entrar com o Google ou com a Apple). Primeira versão: 11 de outubro de 2026.</p>
+    <p class="updated">Vigente desde 13 de novembro de 2026 (Sua equipe: ajudantes na mesma confeitaria). Primeira versão: 11 de outubro de 2026.</p>
   </div>
 
   <div class="wrap legal">
@@ -65,6 +65,7 @@
           <li>Nunca vendemos dados. Usamos alguns serviços de terceiros para fazer o app funcionar, listados abaixo.</li>
           <li>Os dados das suas clientes são seus: você decide o que cadastrar e nós só guardamos para você.</li>
           <li>A foto do cupom e o que você fala para registrar uma encomenda ou compra são lidos por inteligência artificial (Anthropic). O resultado é só uma sugestão: nada é salvo sem você conferir. Não guardamos o áudio, a foto nem o texto.</li>
+          <li>Se você convidar ajudantes para a sua confeitaria, cada pessoa entra com a própria conta e passa a ter os dados da confeitaria no aparelho dela. Você escolhe quem entra, decide se a pessoa vê os valores do negócio e pode retirar o acesso quando quiser.</li>
           <li>Você pode exportar seus dados ou excluir sua conta a qualquer momento, direto no app.</li>
         </ul>
       </div>
@@ -80,6 +81,7 @@
         <li><strong>Os das suas clientes</strong>, que você cadastra para atender as encomendas (nome, telefone, endereço, aniversário etc.). Para estes, <strong>você é a controladora</strong> — é você quem decide coletar e usar — e o Fornada atua como <strong>operador</strong>, guardando e processando essas informações apenas para prestar o serviço a você.</li>
       </ul>
       <p>Por isso, cabe a você ter uma razão legítima para cadastrar cada cliente (como atender a encomenda que ela fez) e atender aos pedidos dela sobre os próprios dados. O app ajuda: você pode corrigir ou apagar o cadastro de uma cliente quando quiser.</p>
+      <p><strong>Se você convida ajudantes</strong> ("Sua equipe"), é você quem decide dar a essas pessoas acesso aos dados da confeitaria, inclusive os das suas clientes. Convide só quem precisa desses dados para trabalhar com você e remova quem deixar de trabalhar. Quem entra como ajudante usa os dados da confeitaria em nome de quem a convidou, apenas para o trabalho.</p>
 
       <h2 id="dados">3. Quais dados tratamos</h2>
       <h3>3.1 Dados que você cadastra no app</h3>
@@ -98,32 +100,40 @@
         <li>Se já existir uma conta com o mesmo e-mail, ao entrar com o Google ou com a Apple as duas viram uma só, e a senha antiga deixa de valer (você pode criar outra em "Esqueci a senha"). Fazemos isso porque o Google e a Apple confirmam que o e-mail é seu.</li>
         <li>Seu plano: qual é, até quando vale e se foi contratado pela loja de aplicativos ou diretamente conosco. <strong>Não recebemos dados do seu cartão</strong>: pagamentos pelas lojas são processados pela Google Play ou pela App Store; pagamentos diretos (por exemplo, Pix) seguem o meio que você escolher.</li>
       </ul>
-      <h3>3.3 Imagens e falas enviadas para leitura</h3>
+      <h3>3.3 Sua equipe (quando você convida ajudantes)</h3>
+      <ul>
+        <li><strong>De quem convida:</strong> o nome que você digita para a pessoa convidada, se ela pode ver os valores do negócio e, enquanto o convite não é usado, um código de convite. O código vale 48 horas e serve uma vez; no servidor guardamos apenas uma versão embaralhada dele (hash), não o código em si.</li>
+        <li><strong>De quem é ajudante:</strong> os dados da conta (como na seção 3.2), a qual confeitaria a conta está ligada, desde quando, e se ela pode ver os valores do negócio.</li>
+        <li><strong>Nos registros da confeitaria:</strong> o nome da ajudante fica guardado no que ela registra (encomendas, pagamentos recebidos, compras, contagens e perdas do estoque), para quem cuida da confeitaria saber quem registrou. Esse nome continua nos registros mesmo que a ajudante saia da equipe.</li>
+        <li>Para evitar que alguém tente adivinhar códigos, contamos quantos códigos errados cada conta digita por dia.</li>
+      </ul>
+      <h3>3.4 Imagens e falas enviadas para leitura</h3>
       <ul>
         <li><strong>Foto do cupom fiscal ou nota de compra</strong>, quando você usa "Foto do cupom".</li>
         <li><strong>Texto da sua fala</strong>, quando você usa "Fale a encomenda" ou "Falar a compra" (ou escreve nesses campos).</li>
         <li>O que vai junto e como é tratado está na seção <a href="#ia">6</a>. Contamos quantas leituras cada conta faz por dia (sem guardar imagens nem textos), para limitar o uso.</li>
       </ul>
-      <h3>3.4 Códigos de barras</h3>
+      <h3>3.5 Códigos de barras</h3>
       <ul>
         <li>Quando você lê o código de barras de uma embalagem, a imagem da câmera é analisada <strong>só no seu aparelho</strong>; nenhuma foto é enviada.</li>
         <li>Ao cadastrar um material novo pelo código, <strong>apenas o número do código</strong> é enviado à base pública de produtos <strong>Open Food Facts</strong>, para trazer o nome e o tamanho da embalagem. Nenhum dado seu ou das suas clientes vai junto.</li>
         <li>O código fica guardado no material, para ele ser achado na próxima leitura.</li>
       </ul>
-      <h3>3.5 Dados de uso e de falhas</h3>
+      <h3>3.6 Dados de uso e de falhas</h3>
       <ul>
         <li><strong>Estatísticas de uso</strong> (Google Firebase Analytics): quais telas são abertas e ações gerais, como "encomenda criada" ou "compra registrada". <strong>Não enviamos</strong> nomes, telefones, textos que você digita, identificadores dos seus registros nem valores em reais.</li>
         <li><strong>Relatórios de falhas</strong> (Google Firebase Crashlytics): quando algo dá errado, o app envia informações técnicas, como modelo do aparelho, versão do sistema e do app e o ponto do código onde o erro aconteceu.</li>
         <li><strong>Configurações remotas</strong> (Google Firebase Remote Config): o app consulta ajustes que podemos ligar ou desligar sem uma nova versão.</li>
         <li>Esses serviços usam um identificador do aparelho/instalação gerado pelo Google.</li>
       </ul>
-      <h3>3.6 Dados que não coletamos</h3>
+      <h3>3.7 Dados que não coletamos</h3>
       <p>Não coletamos sua localização, seus contatos, suas mensagens nem o conteúdo de outros aplicativos. O microfone só é usado enquanto você está falando para registrar uma encomenda ou compra, com a sua permissão, e <strong>o Fornada não grava nem guarda o áudio</strong>.</p>
 
       <h2 id="onde">4. Onde os dados ficam</h2>
       <ul>
         <li><strong>No seu aparelho:</strong> tudo o que você cadastra fica guardado no próprio celular ou tablet, e o app funciona sem internet.</li>
-        <li><strong>Na nuvem (opcional):</strong> se você criar uma conta e o seu plano incluir a nuvem, seus dados são sincronizados com o nosso servidor, hospedado na Back4app (Parse Server), para que você use o mesmo negócio em mais de um aparelho e não perca nada se trocar de celular. Cada confeitaria fica separada e só pode ser lida pela conta dona dela.</li>
+        <li><strong>Na nuvem (opcional):</strong> se você criar uma conta e o seu plano incluir a nuvem, seus dados são sincronizados com o nosso servidor, hospedado na Back4app (Parse Server), para que você use o mesmo negócio em mais de um aparelho e não perca nada se trocar de celular. Cada confeitaria fica separada e só pode ser lida pela conta dona dela e pelas contas das ajudantes que ela convidar.</li>
+        <li><strong>No aparelho de cada ajudante:</strong> fica uma cópia dos dados da confeitaria, para ela trabalhar mesmo sem internet. Essa cópia é apagada do aparelho quando a ajudante é removida, sai da equipe ou exclui a própria conta, na próxima vez que o app é aberto com internet. A opção "Pode ver os valores do negócio" define o que o app <strong>mostra</strong> à ajudante (lucro, custos, relatórios); a cópia guardada no aparelho dela contém os dados da confeitaria por inteiro. Por isso, convide apenas pessoas de confiança.</li>
         <li><strong>No plano gratuito</strong>, os dados ficam apenas no aparelho. Se você desinstalar o app ou trocar de celular sem fazer uma cópia, eles se perdem. Por isso o app oferece "Exportar meus dados", que cria um arquivo que você guarda onde quiser (e-mail, Drive, WhatsApp para você mesma). Esse arquivo fica sob a sua guarda.</li>
         <li><strong>Modo demonstração:</strong> os dados de exemplo são fictícios, ficam separados dos seus e são apagados ao sair da demonstração.</li>
       </ul>
@@ -198,6 +208,7 @@
       <ul>
         <li><strong>Na nuvem:</strong> enquanto sua conta existir. Ao usar <strong>"Excluir minha conta"</strong> (Ajustes &gt; Sua conta), apagamos a conta, as sessões, a ligação com o Google ou a Apple, os registros da sua confeitaria, as fotos dos produtos e os dados do seu plano. Cópias de segurança dos provedores podem levar um período limitado para serem descartadas.</li>
         <li><strong>No aparelho:</strong> até você apagar. Ao excluir a conta, você escolhe manter os dados no aparelho ou apagá-los também; desinstalar o app também os remove.</li>
+        <li><strong>Sua equipe:</strong> um convite não usado é apagado depois de vencer. Quando uma ajudante é removida, sai da equipe ou exclui a conta, apagamos a ligação dela com a confeitaria, e o aparelho dela apaga a cópia dos dados na próxima vez que abrir o app com internet. Se quem é dona excluir a conta, a confeitaria é apagada da nuvem e as ajudantes deixam de ter acesso. Se quem é ajudante excluir a conta, só a conta dela é apagada: a confeitaria continua.</li>
         <li><strong>Estatísticas e falhas:</strong> pelos prazos de retenção configurados no Google Firebase.</li>
         <li><strong>Contagem de leituras por IA</strong> (cupom e voz): por dia de uso, apagada junto com a conta.</li>
         <li>Podemos manter informações mínimas quando a lei exigir, como registros de pagamentos diretos.</li>
@@ -206,7 +217,7 @@
       <h2 id="seguranca">11. Segurança</h2>
       <ul>
         <li>Toda comunicação com nossos servidores usa conexão criptografada (HTTPS).</li>
-        <li>Cada confeitaria na nuvem é protegida por permissões de acesso: só a conta dona pode ler ou alterar os registros dela.</li>
+        <li>Cada confeitaria na nuvem é protegida por permissões de acesso: só a conta dona e as contas das ajudantes convidadas por ela podem ler ou alterar os registros. Só a dona convida, remove e muda o que cada ajudante vê; essas informações da equipe são gravadas apenas pelo nosso servidor.</li>
         <li>A sessão da sua conta é guardada no armazenamento seguro do aparelho (Keychain no iPhone, Keystore no Android).</li>
         <li>Chaves de serviços sensíveis, como a da inteligência artificial, ficam apenas no servidor, nunca dentro do app.</li>
         <li>Para excluir a conta, pedimos a sua senha (ou, se você entra com o Google ou com a Apple, que entre de novo com eles para confirmar).</li>
